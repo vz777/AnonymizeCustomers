@@ -1,0 +1,16 @@
+{form name="anonymize_customers"}
+    <form method="POST" action="{url path='/anonymisation_process'}" class="clearfix">
+        {form_hidden_fields form=$form}
+
+        {if $form_error}
+        <div class="alert alert-danger">{$form_error_message}</div>
+        {/if}
+
+        {form_field field="confirm"}
+            <p>{intl l=""By confirming, your personal data will be permanently anonymized (making it impossible to identify you). Your account will be deleted, and you will <u>no longer be able to access it</u>. This action cannot be undone."." d="anonymizecustomers.fo.default"}</p>
+            <input type="checkbox" name="{$name}" id="{$label_attr.for}" required> {intl l="I confirm that I want to anonymize my data." d="anonymizecustomers.fo.default"}
+        {/form_field}
+
+        <button type="submit">{intl l="Anonymize my data" d="anonymizecustomers.fo.default"}</button>
+    </form>
+{/form}
