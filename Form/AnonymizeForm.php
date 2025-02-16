@@ -2,8 +2,8 @@
 
 namespace AnonymizeCustomers\Form;
 
-use Thelia\Form\BaseForm;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Thelia\Form\BaseForm;
 
 class AnonymizeForm extends BaseForm
 {

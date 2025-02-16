@@ -14,7 +14,6 @@ use Thelia\Log\Tlog;
 use Thelia\Model\AddressQuery;
 use Thelia\Model\CustomerQuery;
 
-
 class AnonymizeController extends BaseFrontController
 {
     /**
@@ -28,7 +27,6 @@ class AnonymizeController extends BaseFrontController
         }
 
         $form = $this->createForm(AnonymizeForm::getName());
-
 
         try {
             $vform = $this->validateForm($form);
